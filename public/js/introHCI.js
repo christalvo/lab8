@@ -17,6 +17,13 @@ function initializePage() {
 
 // init jQuery gestures
 function initGestures() {
+    $(function() {
+      $("div.box").bind("taphold", tapholdHandler);
+      function tapholdHandler(event) {
+        $(event.target).addClass("taphold");
+      }
+    });
+
 	$(function() {
     $(".judge-img").bind("taphold", tapholdHandler);
 
